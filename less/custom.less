@@ -54,19 +54,19 @@ padding-right: 15px;
 padding-left: 15px;
 margin-right: auto;
 margin-left: auto;
-@media (min-width: 576px) {
+@media only screen and (min-width: 576px) {
 width: 540px;
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 width: 720px;
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
 width: 960px;
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
 width: 990px;
 }
-@media (min-width: 1600px) {
+@media only screen and (min-width: 1600px) {
 width: 990px;
 }
 }
@@ -156,10 +156,10 @@ background-image:url('../img/logo.png');
 width: 140px;
 height: 50px;
 display: block;
-margin-top: -5px;
 margin-left: -25px;
 position: absolute;
 left:0;
+bottom:8px;
 }
 }
 &:nth-of-type(2){
@@ -223,7 +223,7 @@ padding-top: 25px;
 padding-bottom: 5px;
 & .service-element {
 text-align: left;	
-display: inherit;
+display: block;
 align-items: center;
 &:before {
 background: none;
@@ -274,9 +274,12 @@ background-size: contain;
 & span {
 padding-left: 35px;
 line-height: 15px;
-@media(max-width: 639px) {
+@media only screen and (max-width: 639px) {
 display:none;
 }
+}
+@media only screen and (max-width: 1023px) {
+display: inherit;
 }
 }
 }
@@ -317,7 +320,7 @@ padding-right: 8px;
 & .nav-toggle {
 display: none;
 }
-@media(max-width: 767px) {
+@media only screen and (max-width: 767px) {
 .nav-toggle {
 display: block;
 padding-right: 10px;
@@ -368,7 +371,7 @@ text-decoration: none;
 text-transform: uppercase;
 }
 }
-@media(max-width: 767px) {
+@media only screen and (max-width: 767px) {
 display: none;
 }
 }
@@ -428,7 +431,9 @@ color: #333;
 display: block;
 font-size: 1.1em;
 height: auto;
-margin: auto auto 10px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 10px;
 max-width: 200px;
 padding: 6px 12px;
 position: absolute;
@@ -438,7 +443,7 @@ right: 0;
 text-align: center;
 text-shadow: 1px 1px 0 #fff;
 transition: all 0.5s ease 0s;
-width: auto;
+width: 250px;
 z-index: 2;
 &:hover {
 background-position: right center;
@@ -446,14 +451,14 @@ background-position: right center;
 }
 }
 }
-@media (min-width: 520px) {
+@media only screen and (min-width: 520px) {
 .product {
 flex: 0 0;
 flex-basis: calc((100% / 2) - 10px);
 }
 
 }
-@media (min-width: 860px) {
+@media only screen and (min-width: 860px) {
 .product {
 flex: 0 0;
 flex-basis: calc((100% / 3) - 10px);
@@ -472,8 +477,6 @@ background: url(../img/soaf_patt_bg1.jpg);
 display: block;
 width: 100%;
 height: auto;
-max-width: 200px;
-max-width: fit-content;
 margin-left: auto;
 margin-right: auto;
 padding-top: 20px;
@@ -510,10 +513,10 @@ font-family: barlow-bold;
 font-size: 20px;
 font-weight: 600;
 line-height: 40px;
-@media(max-width:1023px) {
+@media only screen and (max-width:1023px) {
 font-size: 18px;
 }
-@media(max-width:767px) {
+@media only screen and (max-width:767px) {
 font-size: 16px;
 }
 }
